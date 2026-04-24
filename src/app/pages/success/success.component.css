@@ -1,0 +1,97 @@
+.success-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 1rem;
+}
+
+.success-card {
+  background: #ffffff;
+  padding: 4rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.icon-container {
+  width: 64px;
+  height: 64px;
+  background-color: #f0fdf4; 
+  color: #16a34a; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.content-section {
+  .success-title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #111111;
+    letter-spacing: -0.02em;
+  }
+
+  .success-message {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.6;
+  }
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.btn-primary {
+  padding: 1rem;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #333333;
+  }
+}
+
+.btn-logout {
+  padding: 0.75rem;
+  background: none;
+  border: 1px solid #e5e5e5;
+  color: #666666;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border-color: #fca5a5;
+  }
+}

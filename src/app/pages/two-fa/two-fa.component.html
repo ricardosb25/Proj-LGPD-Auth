@@ -1,0 +1,49 @@
+<div class="two-fa-wrapper">
+  <form class="two-fa-card" (ngSubmit)="onSubmit()">
+    
+    <div class="header-section">
+      <h1 class="two-fa-title">Verificação de Segurança</h1>
+      <p class="two-fa-subtitle">
+        Enviamos um código de 6 dígitos para o seu e-mail.<br>
+        Insira-o abaixo para continuar.
+      </p>
+    </div>
+
+    <div class="otp-container">
+      <input
+        *ngFor="let digit of codeDigits(); let i = index; trackBy: trackByIndex"
+        #otpInput
+        type="text"
+        inputmode="numeric"
+        maxlength="1"
+        class="otp-input"
+        [ngModel]="codeDigits()[i]"
+        (ngModelChange)="codeDigits()[i] = $event"
+        name="digit{{i}}"
+        (input)="onInput($event, i)"
+        (keydown)="onKeyDown($event, i)"
+        (paste)="onPaste($event)"
+        autocomplete="one-time-code"
+      />
+    </div>
+
+    <button 
+      type="submit" 
+      class="btn-submit"
+      [disabled]="isLoading() || !isCodeComplete">
+      {{ isLoading() ? 'Verificando...' : 'Confirmar Código' }}
+    </button>
+
+    <div class="resend-section">
+      <span class="resend-text">Não recebeu o código?</span>
+      <button 
+        type="button" 
+        class="btn-resend" 
+        [disabled]="timeLeft() > 0"
+        (click)="resendCode()">
+        {{ timeLeft() > 0 ? 'Reenviar em ' + timeLeft() + 's' : 'Reenviar agora' }}
+      </button>
+    </div>
+    
+  </form>
+</div>

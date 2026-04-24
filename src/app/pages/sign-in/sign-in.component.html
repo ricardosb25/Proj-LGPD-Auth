@@ -1,0 +1,89 @@
+<div class="register-wrapper">
+  <form class="register-card" (ngSubmit)="onSubmit()">
+    <h1 class="register-title">Criar Conta</h1>
+    <p class="register-subtitle">Preencha seus dados para começar</p>
+
+    <div class="input-group">
+      <label for="name">Nome completo</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [ngModel]="name()"
+        (ngModelChange)="name.set($event)"
+        placeholder="João da Silva"
+        required
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [ngModel]="email()"
+        (ngModelChange)="email.set($event)"
+        placeholder="seu@email.com"
+        required
+      />
+    </div>
+
+    <div class="input-row">
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [ngModel]="password()"
+          (ngModelChange)="password.set($event)"
+          placeholder="••••••••"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Confirmar Senha</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          [ngModel]="confirmPassword()"
+          (ngModelChange)="confirmPassword.set($event)"
+          placeholder="••••••••"
+          [class.input-error]="!passwordsMatch()"
+          required
+        />
+      </div>
+    </div>
+
+    <span class="error-text" *ngIf="!passwordsMatch()">
+      As senhas não coincidem.
+    </span>
+
+    <span
+      class="error-text"
+      *ngIf="errorMessage()"
+      style="
+        color: #e74c3c;
+        font-size: 0.85rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        display: block;
+      "
+    >
+      {{ errorMessage() }}
+    </span>
+
+    <button
+      type="submit"
+      class="btn-submit"
+      [disabled]="isLoading() || !isFormValid()"
+    >
+      {{ isLoading() ? "Criando conta..." : "Cadastrar" }}
+    </button>
+
+    <div class="login-link">Já tem uma conta? <a href="/login">Entrar</a></div>
+  </form>
+</div>

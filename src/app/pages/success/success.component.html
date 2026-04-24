@@ -1,0 +1,22 @@
+<div class="success-wrapper">
+  <div class="success-card">
+    <div class="icon-container">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+
+    <div class="content-section">
+      <h1 class="success-title">Olá, {{ userName() }}!</h1>
+      <p class="success-message">
+        Sua autenticação foi concluída com sucesso. <br>
+        Bem-vindo ao sistema.
+      </p>
+    </div>
+
+    <div class="action-section">
+      <button class="btn-primary">Acessar Painel</button>
+      <button class="btn-logout" (click)="onLogout()">Sair da conta</button>
+    </div>
+  </div>
+</div>

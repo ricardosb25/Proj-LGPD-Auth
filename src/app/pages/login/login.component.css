@@ -1,0 +1,139 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa; 
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.login-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111111;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-size: 0.875rem;
+    color: #667667;
+    font-weight: 500;
+  }
+
+  input {
+    padding: 0.875rem 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: #111111; 
+      background-color: #ffffff;
+    }
+
+    &::placeholder {
+      color: #bbbbbb;
+    }
+  }
+}
+
+.btn-submit {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: #333333;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98); 
+  }
+
+  &:disabled {
+    background-color: #e0e0e0;
+    color: #999999;
+    cursor: not-allowed;
+  }
+}
+
+
+.forgot-section {
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.forgot-link {
+  font-size: 0.875rem;
+  color: #667667;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #111111;
+    text-decoration: underline;
+  }
+}
+
+.sign-in-section {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0; 
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.sign-in-text {
+  color: #667667;
+}
+
+.sign-in-text {
+  color: #667667;
+}
+
+.sign-in-link {
+  color: #111111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}

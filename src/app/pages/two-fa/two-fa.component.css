@@ -1,0 +1,139 @@
+.two-fa-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 1rem;
+}
+
+.two-fa-card {
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header-section {
+  text-align: center;
+}
+
+.two-fa-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.two-fa-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #667667;
+  line-height: 1.5;
+}
+
+.otp-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.otp-input {
+  width: 45px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111111;
+  background-color: #fafafa;
+  
+  border: 1.5px solid #e5e5e5;
+  border-radius: 8px;
+  outline: none; 
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: #111111;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #111111;
+  }
+
+  &::placeholder {
+    color: #cccccc;
+  }
+}
+
+.btn-submit {
+  padding: 1rem;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background-color: #333333;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    background-color: #e0e0e0;
+    color: #999999;
+    cursor: not-allowed;
+  }
+}
+
+.resend-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: -0.5rem;
+}
+
+.resend-text {
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+.btn-resend {
+  background: none;
+  border: none;
+  color: #111111;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+
+  &:hover:not(:disabled) {
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    color: #999999;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 380px) {
+  .otp-input {
+    width: 38px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+}

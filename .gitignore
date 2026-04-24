@@ -1,0 +1,40 @@
+# === Angular ===
+/.angular/
+/dist/
+/tmp/
+/out-tsc/
+/bazel-out/
+
+# === Dependências ===
+/node_modules/
+
+# === Cache de ferramentas e logs ===
+.npm
+.yarn/
+/reports/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === IDEs (VS Code, WebStorm) ===
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+
+# === Testes ===
+/coverage/
+/e2e/out-tsc/
+
+# === Variáveis de Ambiente ===
+# Nunca versionar ficheiros com chaves de API reais
+.env
+.env.*
+src/environments/environment.prod.ts
+
+# === Sistema Operativo ===
+.DS_Store
+Thumbs.db
