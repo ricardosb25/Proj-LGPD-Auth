@@ -76,6 +76,13 @@
       {{ errorMessage() }}
     </span>
 
+    <div style="font-size: 0.85rem; color: #a0a0a0; text-align: center; margin-bottom: 1.2rem;">
+      Ao clicar em Cadastrar, você concorda com nossos
+      <a routerLink="/terms-of-use" style="color: #3498db; text-decoration: none; font-weight: 500;">
+        Termos de Uso e Privacidade
+      </a>.
+    </div>
+
     <button
       type="submit"
       class="btn-submit"
@@ -84,6 +91,8 @@
       {{ isLoading() ? "Criando conta..." : "Cadastrar" }}
     </button>
 
-    <div class="login-link">Já tem uma conta? <a href="/login">Entrar</a></div>
+    <div class="login-link">
+      Já tem uma conta? <a routerLink="/login">Entrar</a>
+    </div>
   </form>
 </div>
