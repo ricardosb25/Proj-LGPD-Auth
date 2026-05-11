@@ -20,4 +20,5 @@ export const routes: Routes = [
   },
   { path: "success", component: SuccessComponent, canActivate: [authGuard] },
   { path: "**", redirectTo: "/login" },
+  { path: "terms-of-use", component: TermsOfUseComponent },
 ];
