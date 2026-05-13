@@ -4,9 +4,9 @@ import { RegisterComponent } from "./pages/sign-in/sign-in.component";
 import { TwoFaComponent } from "./pages/two-fa/two-fa.component";
 import { SuccessComponent } from "./pages/success/success.component";
 import { PasswordRecoveryComponent } from "./pages/password-recovery/password-recovery.component";
-
 import { authGuard } from "./guards/auth.guard";
 import { guestGuard } from "./guards/guest.guard";
+import { TermsOfUseComponent } from "./pages/terms-of-use/terms-of-use.component";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
