@@ -4,54 +4,56 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #121212;
+  background-color: #f4f7f6; 
 }
 
 .terms-card {
-  background-color: #1e1e1e;
+  background-color: #ffffff; 
   border-radius: 8px;
   padding: 2.5rem;
   width: 100%;
   max-width: 700px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
   display: flex;
   flex-direction: column;
 }
 
 .terms-title {
-  color: #ffffff;
+  color: #2c3e50; 
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
 .terms-content {
-  background-color: #2a2a2a;
+  background-color: #f8f9fa; 
+  border: 1px solid #e1e4e8; 
   padding: 1.5rem;
   border-radius: 6px;
   max-height: 400px; 
   overflow-y: auto; 
   margin-bottom: 2rem;
-  color: #d1d1d1;
+  color: #4a4a4a; 
   line-height: 1.6;
 
   &::-webkit-scrollbar {
     width: 8px;
   }
   &::-webkit-scrollbar-track {
-    background: #1e1e1e;
+    background: #f1f1f1; 
     border-radius: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background: #555;
+    background: #c1c1c1; 
     border-radius: 4px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: #777;
+    background: #a8a8a8;
   }
 
   h2 {
-    color: #ffffff;
+    color: #2c3e50;
     font-size: 1.1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -69,7 +71,7 @@
   .last-updated {
     margin-top: 2rem;
     font-size: 0.85rem;
-    color: #888;
+    color: #7f8c8d;
     text-align: right;
     font-style: italic;
   }
@@ -90,8 +92,12 @@
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: #2980b9;
   }
 }
+
+/* TO DO: padronizar background color */  
